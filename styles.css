@@ -1,12 +1,16 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .navbar {
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: #333;
     padding: 1rem 0;
@@ -14,12 +18,25 @@ body {
     transition: background-color 0.3s;
 }
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
 .nav-menu {
     list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .nav-item {
@@ -30,23 +47,51 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    transition: color 0.3s, font-size 0.3s;
 }
 
 .nav-link:hover {
     color: #ff6347;
+    font-size: 1.3rem;
 }
 
 .content {
-    margin-top: 5rem; /* Ensure content doesn't hide behind the fixed navbar */
-    padding: 2rem;
+    margin-top: 6rem; /* Adjust this value to match the height of the navbar */
 }
 
-section {
-    height: 100vh;
+.section {
+    padding: 4rem 0;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Change navbar background on scroll */
+.section:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.section h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
 .scrolled {
     background-color: #555;
 }
